@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://obscure-mountain-55608.herokuapp.com/ -->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Disown</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Disown</div>
+      <div class="list-group list-group-flush">
+        <a href="#login" onclick="myFunction5()"class="list-group-item list-group-item-action bg-light">Login</a>
+        <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a> -->
+        <a href="#profile"  onclick="myFunction2()" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#status" onclick="myFunction3()" class="list-group-item list-group-item-action bg-light">Status</a>
+        <a href="#forum" onclick="myFunction1()" class="list-group-item list-group-item-action bg-light">Forum</a> 
+        <a href="#message" onclick="myFunction4()" class="list-group-item list-group-item-action bg-light"> Message</a> 
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Feed</h1>
+        <hr>
+        <!-- <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p> -->
+
+        <div id="login">
+            <div class="d-flex justify-content-center h-100">
+              <div class="cardLogin">
+                <div class="card-header">
+                  <h3>Login</h3>
+                </div>
+      
+                <div class="card-body">
+                  <form id="form">
+      
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      </div>
+                      <input type="text" name="username" class="form-control" placeholder="username">
+                    </div>
+      
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                      </div>
+                      <input id="password_1" name="password_1" type="password" class="form-control"
+                        placeholder="password">
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" value="Login" class="btn float-right sumbit_btn" href="http://localhost:3000/">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+        <div id="profile">
+            <h3>Profile:</h3>
+          <div id="profileCenter">
+            <img src="/img/1024px-Circle-icons-profile.svg.png" class="img-fluid" alt="" style="width:150; height:153px;"><br>
+            <div class="card-body">
+                <form id="form" action="https://httpbin.org/post" method="POST">
+    
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" name="firstname" class="form-control" value="Sam">
+                  </div>
+    
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" name="lastname" class="form-control" value="Smith">
+                  </div>
+    
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" name="username" class="form-control" value="Diswon">
+                  </div>
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input id="email" name="email" type="email" class="form-control" value="dfjsdgkgskjd@dkjfgs.com">
+                  </div>
+                </form>
+              </div>
+          <hr>
+        </div>
+        </div>
+        <div id="status">
+            <h3>Status:</h3>
+            <form >
+              <div class="form-group">
+                <label for="usr">Whats on your maind?:</label>
+                <input type="text" class="form-control" id="usr" name="userMsg">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+          <div class="card bg-secondary text-white">
+              <div class="card-body"> It was Nice Morning Today!</div>
+            </div>
+            <br>
+            <div class="card bg-secondary text-white">
+                <div class="card-body">Medterms is around the corner</div>
+              </div>
+             <br>
+             <div class="card bg-secondary text-white">
+                <div class="card-body">Who is ready for BlackFriday?</div>
+              </div> 
+          <hr>
+        </div>
+        <div id="forum">
+            <h3>Forum:</h3>
+            <form >
+                <div class="form-group">
+                  <label for="usr">Thread creation:</label>
+                  <div class="col-xs-3">
+                  <input type="text" class="form-control" id="title" placeholder="Title" name="title" >
+                  </div>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <button type="" class="btn btn-primary">Submit</button>
+              </form>
+              <hr>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small> 3 days</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small> 3 Commennts</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">4 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small class="text-muted">10 comments</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">10 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small class="text-muted">10 comments</small>
+                </a>
+              </div>
+
+             <hr>
+        </div>
+        
+        <div id="message">
+            <h3>Message:</h3>
+            <div class="card" style="width: 18rem;">
+              <br>
+                <img class="card-img-top" src="/img/1024px-Circle-icons-profile.svg.png" class="img-fluid" alt="" style="width:100px; height:100px;"alt="Card image cap" align="middle">
+                <div class="card-body">
+                  <h5 class="card-title">Message</h5>
+                  <p class="card-text">Sam when will you be ready??</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+               <hr>
+               <h3>Message:</h3>
+               <div class="card" style="width: 18rem;">
+                 <br>
+                   <img class="card-img-top" src="/img/1024px-Circle-icons-profile.svg.png" class="img-fluid" alt="" style="width:100px; height:100px;"alt="Card image cap" align="middle">
+                   <div class="card-body">
+                     <h5 class="card-title">Message</h5>
+                     <p class="card-text">Sam when will you be ready??</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                   </div>
+                 </div>
+                  <hr>
+          </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+        <!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Social Media</h5>
+          <ul class="footer-links">
+              <li> <a href="https://www.facebook.com/" class="Flinks"> Facebook </a> </li>
+              <li> <a href="https://www.instagram.com/" class="Flinks"> Instagram </a> </li>
+              <li> <a href="https://twitter.com/?lang=en" class="Flinks"> Twitter </a> </li>
+            </ul>
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Toronto Office</h5>
+          <p>
+              1750 Finch Avenue East <br>
+              Toronto, Ontario <br>
+              Canada M2J 2X5
+          </p>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Text -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> Diswon.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+</body>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+
+    function myFunction1() {
+      var x = document.getElementById("forum");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction2() {
+      var x = document.getElementById("profile");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction3() {
+      var x = document.getElementById("status");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction4() {
+      var x = document.getElementById("message");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction5() {
+      var x = document.getElementById("login");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+  </script>
+</html>
